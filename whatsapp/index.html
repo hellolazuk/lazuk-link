@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>WhatsApp Channel</title>
+
+    <!-- Open Graph meta tags for social preview -->
+    <meta property="og:title" content="Join Our WhatsApp Channel!" />
+    <meta property="og:description" content="Click here to join our official WhatsApp channel now." />
+    <meta property="og:image" content="https://lazukhasan.com/bn/wp-content/uploads/2023/10/img1.jpeg" />
+    <meta property="og:url" content="https://lazuk.link/whatsapp" />
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,6 +20,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KT35BVPT');</script>
     <!-- End Google Tag Manager -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -77,21 +86,22 @@
     </div>
 
     <script>
+        const destinationURL = "https://whatsapp.com/channel/0029VagdRn2KrWQzRE2BfQ0N";
         let countdown = 5;
         const countdownElement = document.getElementById("countdown");
-        const destinationURL = "https://whatsapp.com/channel/0029VagdRn2KrWQzRE2BfQ0N"; // Replace with your actual affiliate link
 
-        function updateCountdown() {
+        document.getElementById("manual-link").href = destinationURL;
+
+        const interval = setInterval(() => {
             countdown--;
             countdownElement.textContent = countdown;
             if (countdown === 0) {
-                window.location.href = destinationURL;
+                clearInterval(interval);
+                window.location.replace(destinationURL); // safer redirect
             }
-        }
-
-        document.getElementById("manual-link").href = destinationURL;
-        setInterval(updateCountdown, 1000);
+        }, 1000);
     </script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KT35BVPT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
